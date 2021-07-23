@@ -12,7 +12,7 @@
 <script>
 export default {
   name: 'HomeSwiper',
-  props : {
+  props: {
     list: Array
   },
   data () {
