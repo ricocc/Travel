@@ -2,7 +2,7 @@
   <div>
     <div class="title">旅程游记</div>
     <ul>
-      <li class="item border-bottom" v-for="item of WeekendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <div class="item-img-wrapper">
           <img :src="item.imgUrl" class="item-img" alt="">
         </div>
@@ -18,46 +18,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-   return {
-    WeekendList: [{
-        id: '0001',
-        imgUrl: 'http://pic.qyer.com/zhuanlan/article/20210307/982398196989?imageMogr2/auto-orient/thumbnail/!670x300r/gravity/Center/crop/670x300/format/jpg|imageslim',
-        title: '半城烟火半城仙，没有人不会爱上这座“众神之城”！',
-        desc: '清明节三日小长假“嗖”地一下就没了，大部分社畜已经在静候五一劳动节了 ！再上19天的班，上半年最长的小长假就要来了！！...',
-        time: '2月22日, 2021'
-      }, {
-        id: '0002',
-        imgUrl: 'http://pic.qyer.com/zhuanlan/article/20210307/982398196989?imageMogr2/auto-orient/thumbnail/!670x300r/gravity/Center/crop/670x300/format/jpg|imageslim',
-        title: '半城烟火半城仙，没有人不会爱上这座“众神之城”！',
-        desc: '清明节三日小长假“嗖”地一下就没了，大部分社畜已经在静候五一劳动节了 ！再上19天的班，上半年最长的小长假就要来了！！...',
-        time: '2月22日, 2021'
-      }, {
-        id: '0003',
-        imgUrl: 'http://pic.qyer.com/zhuanlan/article/20210307/982398196989?imageMogr2/auto-orient/thumbnail/!670x300r/gravity/Center/crop/670x300/format/jpg|imageslim',
-        title: '半城烟火半城仙，没有人不会爱上这座“众神之城”！',
-        desc: '清明节三日小长假“嗖”地一下就没了，大部分社畜已经在静候五一劳动节了 ！再上19天的班，上半年最长的小长假就要来了！！...',
-        time: '2月22日, 2021'
-      }, {
-        id: '0004',
-        imgUrl: 'http://pic.qyer.com/zhuanlan/article/20210307/982398196989?imageMogr2/auto-orient/thumbnail/!670x300r/gravity/Center/crop/670x300/format/jpg|imageslim',
-        title: '半城烟火半城仙，没有人不会爱上这座“众神之城”！',
-        desc: '清明节三日小长假“嗖”地一下就没了，大部分社畜已经在静候五一劳动节了 ！再上19天的班，上半年最长的小长假就要来了！！...',
-        time: '2月22日, 2021'
-      }, {
-        id: '0005',
-        imgUrl: 'http://pic.qyer.com/zhuanlan/article/20210307/982398196989?imageMogr2/auto-orient/thumbnail/!670x300r/gravity/Center/crop/670x300/format/jpg|imageslim',
-        title: '半城烟火半城仙，没有人不会爱上这座“众神之城”！',
-        desc: '清明节三日小长假“嗖”地一下就没了，大部分社畜已经在静候五一劳动节了 ！再上19天的班，上半年最长的小长假就要来了！！...',
-        time: '2月22日, 2021'
-      }, {
-        id: '0006',
-        imgUrl: 'http://pic.qyer.com/zhuanlan/article/20210307/982398196989?imageMogr2/auto-orient/thumbnail/!670x300r/gravity/Center/crop/670x300/format/jpg|imageslim',
-        title: '半城烟火半城仙，没有人不会爱上这座“众神之城”！',
-        desc: '清明节三日小长假“嗖”地一下就没了，大部分社畜已经在静候五一劳动节了 ！再上19天的班，上半年最长的小长假就要来了！！...',
-        time: '2月22日, 2021'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

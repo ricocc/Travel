@@ -2,7 +2,7 @@
   <div>
     <div class="title">推荐详情</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <div class="item-img-wrapper">
           <img :src="item.imgUrl" class="item-img" alt="">
         </div>
@@ -18,40 +18,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-   return {
-    recommendList: [{
-        id: '0001',
-        imgUrl: 'https://pic.qyer.com/zhuanlan/article/20210312/864356425875/300x200',
-        title: '最世界榜单：一生必去的50个地方',
-        desc: '世界那么大，一生是否有足够的时间用脚步丈量世界的每一个角落？'
-      }, {
-        id: '0002',
-        imgUrl: 'https://pic.qyer.com/zhuanlan/article/20210312/864356425875/300x200',
-        title: '最世界榜单：一生必去的50个地方',
-        desc: '世界那么大，一生是否有足够的时间用脚步丈量世界的每一个角落？'
-      }, {
-        id: '0003',
-        imgUrl: 'https://pic.qyer.com/zhuanlan/article/20210312/864356425875/300x200',
-        title: '最世界榜单：一生必去的50个地方',
-        desc: '世界那么大，一生是否有足够的时间用脚步丈量世界的每一个角落？'
-      }, {
-        id: '0004',
-        imgUrl: 'https://pic.qyer.com/zhuanlan/article/20210312/864356425875/300x200',
-        title: '最世界榜单：一生必去的50个地方',
-        desc: '世界那么大，一生是否有足够的时间用脚步丈量世界的每一个角落？'
-      }, {
-        id: '0005',
-        imgUrl: 'https://pic.qyer.com/zhuanlan/article/20210312/864356425875/300x200',
-        title: '最世界榜单：一生必去的50个地方',
-        desc: '世界那么大，一生是否有足够的时间用脚步丈量世界的每一个角落？'
-      }, {
-        id: '0006',
-        imgUrl: 'https://pic.qyer.com/zhuanlan/article/20210312/864356425875/300x200',
-        title: '最世界榜单：一生必去的50个地方',
-        desc: '世界那么大，一生是否有足够的时间用脚步丈量世界的每一个角落？'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
