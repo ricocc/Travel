@@ -4,7 +4,6 @@
     <router-link to="/">
         <div class="iconfont header-back">&#xe601;</div>
     </router-link>
-
   </div>
 </template>
 <script>
