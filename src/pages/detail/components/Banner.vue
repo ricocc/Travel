@@ -1,15 +1,15 @@
 <template>
     <div>
         <div class="banner" @click="handleBannerClick">
-            <img class="banner-img" src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/1/3/16812ae616c420f4~tplv-t2oaga2asx-watermark.awebp" alt="">
+            <img class="banner-img" :src="bannerImg" alt="">
             <div class="banner-info">
-                <div class="banner-title">aasda</div>
-                <div class="banner-number"><span class="iconfont banner-icon">&#xe607;</span>99</div>
+                <div class="banner-title">{{this.sightName}}</div>
+                <div class="banner-number"><span class="iconfont banner-icon">&#xe607;</span>{{this.bannerImgs.length}}</div>
             </div>
 
         </div>
         <common-gallary
-            :imgs="imgs"
+            :imgs="bannerImgs"
             v-show="showGallary"
             @close="handleGallaryClose"></common-gallary>
     </div>
@@ -18,10 +18,14 @@
 import CommonGallary from 'common/gallary/Gallary'
 export default {
     name: 'DetailBanner',
+    props: {
+        sightName: String,
+        bannerImg: String,
+        bannerImgs: Array
+    },
     data () {
         return {
-            showGallary: false,
-            imgs: ['https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bd07aa48b85d40bb9518da9dae0d63ea~tplv-k3u1fbpfcp-zoom-crop-mark:1304:1304:1304:734.awebp', 'https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/54b9552d07e3448c807df981f265eda1~tplv-k3u1fbpfcp-zoom-crop-mark:1304:1304:1304:734.awebp']
+            showGallary: false
         }
     },
     components: {
